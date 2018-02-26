@@ -85,12 +85,6 @@ public class Util {
 	public static Logger getConsoleLogger(){
 		return Attr.consoleLogger;
 	}
-	public static Logger getStatusFileLogger(){
-		return Attr.statusFileLogger;
-	}
-	public static Logger getPressureTestFileLogger(){
-		return Attr.pressureTestFileLogger;
-	}
 	public static Gson getGson() {
 		return gson;
 	}
@@ -105,8 +99,6 @@ public class Util {
 		private static Map<String,String> SystemParam = new HashMap<>();
 		private static final Logger fileLogger = LogManager.getLogger("util.fileLogger");
 		private static final Logger consoleLogger = LogManager.getLogger("util.consoleLogger");
-		private static final Logger statusFileLogger = LogManager.getLogger("util.statusFileLogger");
-		private static final Logger pressureTestFileLogger = LogManager.getLogger("util.pressureTestFileLogger");
 		
 	}
 	
