@@ -79,11 +79,14 @@ public class Util {
 	public static String getGString(JsonObject aObj, String aKey){
 		return (aObj.get(aKey) != null && !(aObj.get(aKey)instanceof JsonNull))?aObj.get(aKey).getAsString():null;
 	}
+	public static Logger getConsoleLogger(){
+		return Attr.consoleLogger;
+	}
 	public static Logger getFileLogger(){
 		return Attr.fileLogger;
 	}
-	public static Logger getConsoleLogger(){
-		return Attr.consoleLogger;
+	public static Logger getDailyFileLogger(){
+		return Attr.dailyFileLogger;
 	}
 	public static Gson getGson() {
 		return gson;
@@ -99,6 +102,7 @@ public class Util {
 		private static Map<String,String> SystemParam = new HashMap<>();
 		private static final Logger fileLogger = LogManager.getLogger("util.fileLogger");
 		private static final Logger consoleLogger = LogManager.getLogger("util.consoleLogger");
+		private static final Logger dailyFileLogger = LogManager.getLogger("util.dailyFileLogger");
 		
 	}
 	

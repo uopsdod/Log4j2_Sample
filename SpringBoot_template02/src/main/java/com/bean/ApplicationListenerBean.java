@@ -1,6 +1,7 @@
 package com.bean;
 
 
+import org.apache.logging.log4j.Level;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextClosedEvent;
@@ -16,6 +17,16 @@ public class ApplicationListenerBean implements ApplicationListener {
         	Util.getConsoleLogger().info("ContextRefreshedEvent start ###################");
         	Util.getFileLogger().info("ContextRefreshedEvent start ###################");
      		
+        	/** log4j2 Demo **/
+        	Util.getConsoleLogger().info("Console log");
+        	Util.getFileLogger().info("File log");
+        	Util.getDailyFileLogger().info("DailyFile log");
+        	
+        	// 我今年26歲，喜歡打排球
+        	Util.getConsoleLogger().printf(Level.INFO, "我今年%d歲，喜歡打%s", 26, "排球"); 
+        	
+        	
+        	
         	Util.getConsoleLogger().info("ContextRefreshedEvent end ###################");
         	Util.getFileLogger().info("ContextRefreshedEvent end ###################");
         }
